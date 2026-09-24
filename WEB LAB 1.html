@@ -10,18 +10,25 @@
             padding: 20px;
             margin: 0;
         }
-        
         .wrapper {
             display: flex;
             gap: 30px;
         }
-        
         main {
             flex: 1;
         }
-        
         aside {
             width: 250px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        form label, form input, form textarea, form button {
+            display: block;
+            margin-bottom: 10px;
+        }
+        form textarea {
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -29,6 +36,12 @@
     <header>
         <h1>Чеботарёв Владислав</h1>
         <h2>Книжный червь и писатель</h2>
+        <img 
+            src="images/avatar.jpg" 
+            width="300" 
+            height="300"
+            alt="Аватар Чеботарёв Владислав умный парень с пером"
+        >
     </header>
     <div class="wrapper">
         <main>
@@ -51,23 +64,18 @@
                     <li>«Книжный вор»</li>
                 </ol>
             </section>
-            <img 
-                src="https://avatars.mds.yandex.net/i?id=feb876bdf959ce7fd3bdb31eb8efc8eb_l-5242614-images-thumbs&n=13" 
-                width="300" 
-                height="300"
-                alt="Аватар Чеботарёв Владислав умный парень с пером"
-            >
-            <li>Чеботарёв Владислав Дмитриевич</li>
-            <br><br>
+            <section>
+                <p>Чеботарёв Владислав Дмитриевич</p>
+            </section>
             <section>
                 <h2>✉️ Обратная связь</h2>
                 <form>
-                    <label>Имя:</label><br>
-                    <input type="text" name="username" placeholder="Введите ваше имя"><br><br>
-                    <label>Email:</label><br>
-                    <input type="email" name="useremail" placeholder="example@mail.com"><br><br>
-                    <label>Сообщение:</label><br>
-                    <textarea name="usermessage" placeholder="Напишите ваше сообщение..."></textarea><br><br>
+                    <label>Имя:</label>
+                    <input type="text" name="username" placeholder="Введите ваше имя">
+                    <label>Email:</label>
+                    <input type="email" name="useremail" placeholder="example@mail.com">
+                    <label>Сообщение:</label>
+                    <textarea name="usermessage" placeholder="Напишите ваше сообщение..."></textarea>
                     <button type="submit">Отправить</button>
                 </form>
             </section>
@@ -79,7 +87,7 @@
         </aside>
     </div>
     <footer>
-        <p>Писатель Чеботарёв Владислав</p>
+        <p>© 2026 Чеботарёв Владислав</p>
     </footer>
 </body>
 </html>
