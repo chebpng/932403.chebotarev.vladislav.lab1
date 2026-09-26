@@ -2,33 +2,14 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О себе — Книжный червь</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            background-color: #F5EDE0;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            margin: 0;
-        }
-        .wrapper {
-            display: flex;
-            gap: 30px;
-        }
-        main {
-            flex: 1;
-        }
-        aside {
-            width: 250px;
-        }
-        section {
+        .project-list {
+            padding-left: 30px;
             margin-bottom: 20px;
-        }
-        form label, form input, form textarea, form button {
-            display: block;
-            margin-bottom: 10px;
-        }
-        form textarea {
-            margin-bottom: 20px;
+            list-style-type: decimal;
         }
     </style>
 </head>
@@ -41,6 +22,7 @@
             width="300" 
             height="300"
             alt="Аватар Чеботарёв Владислав умный парень с пером"
+            style="max-width: 100%;"
         >
     </header>
     <div class="wrapper">
@@ -54,14 +36,42 @@
                     <li>Редактура и вычитка</li>
                     <li>Создание литературных сценариев</li>
                 </ul>
-            </section>
+            </section> 
             <section>
                 <h2>Проекты:</h2>
-                <ol>
-                    <li>«Дом листьев»</li>
-                    <li>«Тайная история»</li>
-                    <li>«Сто лет одиночества»</li>
-                    <li>«Книжный вор»</li>
+                <ol class="project-list">
+                    <li>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">«Дом листьев»</div>
+                                <div class="flip-card-back">Экспериментальный роман о памяти и архитектуре пространства.</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">«Тайная история»</div>
+                                <div class="flip-card-back">Интеллектуальный триллер о студентах-классиках и роковой ошибке.</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">«Сто лет одиночества»</div>
+                                <div class="flip-card-back">Эпическая сага о семье Буэндиа и магическом реализме.</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">«Книжный вор»</div>
+                                <div class="flip-card-back">История о силе слов и человечности в годы Второй мировой войны.</div>
+                            </div>
+                        </div>
+                    </li>
                 </ol>
             </section>
             <section>
@@ -70,12 +80,15 @@
             <section>
                 <h2>✉️ Обратная связь</h2>
                 <form>
-                    <label>Имя:</label>
-                    <input type="text" name="username" placeholder="Введите ваше имя">
-                    <label>Email:</label>
-                    <input type="email" name="useremail" placeholder="example@mail.com">
-                    <label>Сообщение:</label>
-                    <textarea name="usermessage" placeholder="Напишите ваше сообщение..."></textarea>
+                    <label for="username">Имя:</label>
+                    <input type="text" id="username" name="username" placeholder="Введите ваше имя" required>
+                    
+                    <label for="useremail">Email:</label>
+                    <input type="email" id="useremail" name="useremail" placeholder="example@mail.com" required>
+                    
+                    <label for="usermessage">Сообщение:</label>
+                    <textarea id="usermessage" name="usermessage" placeholder="Напишите ваше сообщение..." required></textarea>
+                    
                     <button type="submit">Отправить</button>
                 </form>
             </section>
